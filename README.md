@@ -1,111 +1,94 @@
-Blog Generator – AI-Powered Content Creation Tool
+# Blog Generator
 
-This project is an AI-powered blog generation application built with Python, Streamlit, and a custom backend.
-Users can enter a topic, style, or keywords, and the application will generate a complete blog article.
+This project is an AI-powered blog generation application built using Python, Streamlit, and a custom backend. Users can input a topic, style, or keywords, and the system generates a complete blog article. The project is modular, lightweight, and easy to deploy.
 
-The system is lightweight, modular, and easy to deploy.
+## Features
 
-Features
+- Generates blog articles based on user prompts.
+- Supports local LLMs (Ollama) and cloud-based Gemini API.
+- Streamlit-based user interface.
+- Clear separation of backend logic and UI.
+- Easy deployment on Streamlit Cloud or local environments.
 
-AI-generated blog articles from a topic or prompt
+## Project Structure
 
-Supports local LLMs (Ollama) or cloud-based Gemini API
-
-Clean and simple Streamlit interface
-
-Modular structure with separate backend and UI
-
-Easy to install and deploy on Streamlit Cloud or locally
-
-Project Structure
 .
-├── backend.py          # Blog generation logic and model interface
-├── ui.py               # Streamlit-based user interface
-├── requirements.txt    # Dependencies
+├── backend.py
+├── ui.py
+├── requirements.txt
 ├── .gitignore
 └── myenv/ (ignored)
 
-Installation and Setup
-1. Clone the repository
+## Installation and Setup
+
+### 1. Clone the repository
+
 git clone https://github.com/SrijanSharma08/Blog_Generator.git
 cd Blog_Generator
 
-2. Create and activate a virtual environment
-python -m venv myenv
-myenv/Scripts/activate  # Windows
+### 2. Create and activate a virtual environment
 
-3. Install dependencies
+python -m venv myenv
+myenv/Scripts/activate   (Windows)
+
+### 3. Install dependencies
+
 pip install -r requirements.txt
 
-4. Run the Streamlit application
+### 4. Run the application
+
 streamlit run ui.py
 
-Model Options
-Option 1: Local model (Ollama)
+## Model Usage
 
-No API key needed
+### Option 1: Local model (Ollama)
 
-Works offline
+- Works without an internet connection.
+- No API key required.
 
-Suitable for local development
+### Option 2: Gemini API
 
-Option 2: Gemini API
+Requires a Gemini API key.
 
-Requires a Google Gemini API key
-
-Higher-quality outputs
-
-Set the API key:
+Set the key on Linux/Mac:
 
 export GEMINI_API_KEY="your_api_key_here"
 
-
-(Windows CMD)
+On Windows CMD:
 
 set GEMINI_API_KEY=your_api_key_here
 
-How It Works
+## How It Works
 
-User inputs a topic or prompt in the Streamlit interface.
+1. User enters a topic into the Streamlit UI.
+2. The UI sends the input to backend.py.
+3. Backend interacts with the selected model (Ollama or Gemini).
+4. The model generates a blog article.
+5. The UI displays the output.
 
-The UI sends the request to backend.py.
+## Deployment
 
-The backend communicates with the selected LLM.
+### Deploy on Streamlit Cloud
 
-The model returns a generated blog article.
+1. Push project to GitHub.
+2. Visit https://share.streamlit.io
+3. Connect your repository.
+4. Select ui.py as the entry file.
+5. Deploy.
 
-The UI displays the blog in a readable format.
+## Requirements
 
-Deployment
-Deploy on Streamlit Cloud
-
-Push the project to GitHub
-
-Visit https://share.streamlit.io
-
-Connect your GitHub repository
-
-Select ui.py as the entrypoint
-
-Deploy the app
-
-I can help configure requirements, environment variables, and deployment settings if needed.
-
-Requirements
-
-Typical dependencies (based on your setup):
+Example dependencies:
 
 streamlit
 requests
 
+Add any additional libraries used in backend.py.
 
-Include any additional libraries you use in your backend.
+## Contributing
 
-Contributing
+Contributions are welcome. For major changes, open an issue to discuss your ideas.
 
-Contributions are welcome.
-For major changes, please open an issue to discuss your proposed improvements.
+## License
 
-License
-
-This project is open-source and free to modify and use.
+This project is open-source and free to modify.
